@@ -9,7 +9,8 @@
 Party.destroy_all
 
 Party.create([
-	{name: '21st Birthday'},
-	{name: 'Happy Anniversary Bob and June'},
-	{name: 'Cinco de Drinko'}
+	{name: '21st Birthday', date: "August 22, 2010", user: "juliepranger"},
+	{name: 'Happy Anniversary Bob and June', date: "March 1, 2000", user: "frankenstein"},
+	{name: 'Cinco de Drinko', date: "May 5, 2014", user: "juliepranger"}
+	{name: 'Hallow\'s Eve', date: "October 31, 2013", user: "adamjbouck"}
 	])

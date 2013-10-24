@@ -1,0 +1,27 @@
+<div id="newcontainer">
+
+	<h1>Enter a new party</h1>
+
+	<%= form_for @party do |party| %>
+<p>
+	<%= party.label :name, "Name" %>
+	<%= party.text_field :name%>
+</p>
+
+<p>
+	<%= party.label :date, "Date"%>
+	<%=party.text_field :date%>
+</p>
+
+<p>
+	<%= party.label :user, "User"%>
+	<%=party.text_field :user %>
+</p>
+
+<p>
+<%= party.submit %> 
+</p>
+
+<%end%>
+
+</div>

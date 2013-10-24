@@ -1,0 +1,79 @@
+@import 'bootstrap';
+
+$maincolor: #338036;
+
+
+
+body {
+	background-color: $maincolor;
+}
+
+#container {
+	background-color: #eee;
+	width: 800px;
+	margin: 0 auto;
+	font-family: Helvetica;
+	color: #D9DEDA;
+}
+
+nav {
+   background-color: #D9DEDA;
+   font-color: #338036;
+}
+
+nav ul {
+   font-family: Helvetica;
+   color: black;
+}
+
+/*.row div {
+	border: 1px solid 
+} */
+
+
+h1 {
+   padding-top: 20px;
+	color: #D9DEDA;
+   font-family: 'Rock Salt', cursive;
+   font-size: 48px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+ul {
+	list-style-type: none;
+	display: inline;
+}
+
+#homecontainer { 
+
+   header {
+      background:url(file000279282873.jpg)
+
+      }
+   }
+}
+
+.button {
+   border: none;
+   background: #77c785;
+   background: -webkit-gradient(linear, left top, left bottom, from(#77c785), to(#77c785));
+   background: -webkit-linear-gradient(top, #77c785, #77c785);
+   background: -moz-linear-gradient(top, #77c785, #77c785);
+   background: -ms-linear-gradient(top, #77c785, #77c785);
+   background: -o-linear-gradient(top, #77c785, #77c785);
+   padding: 4px 8px;
+   border-radius: 17px;
+   color: white;
+   font-size: 12px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+}
+.button:hover {
+   background: #34824f;
+   color: #ccc;
+}
+.button:active {
+   background: #496273;
+}

@@ -1,5 +1,17 @@
-<h1>I am the party index</h1>
+<div id="indexcontainer">
+	<h1>My Parties</h1>
 
-<% @parties.each do |party| %>
+	<% @parties.each do |party| %>
+<div>
+	<ul>
+		<li><%= party.name %></li>
+		<li><%= party.date %></li>
+		<li><%= party.user %>	
+				<%= button_to "X", {action: "destroy", id: party.id}, {method: :delete, data:{confirm: "Are you sure?"}, :class => "button"} %> Remove Party</li>
+	</ul>
+</div>
 
-<% end %>
+
+	<% end %>
+</div>
+User id: <%= session[:user_id] %>

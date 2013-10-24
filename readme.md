@@ -3,7 +3,8 @@ PotLuck App - Julie Pranger
 
 possible names:
 
-A Long Expected Party
+Cornucopia
+<!-- A Long Expected Party -->
 <!-- A Place at the Table
 What Can I Bring?
 Prep the Party

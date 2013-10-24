@@ -1,0 +1,22 @@
+<div id="container">
+	<h1>Log In</h1>
+
+<%= form_for @user, url:"/authentications" do |user| %>
+	<p>
+		<%= user.label :email, "E-mail" %>
+		<%= user.text_field :email %>
+	</p>
+
+	<p>
+		<%= user.label :password, "Password" %>
+		<%= user.text_field :password %>
+	</p>
+
+	<p>
+		<%= user.submit "Log In" %>
+	</p>
+
+	<% end %>
+
+</div>
+user id: <%= session[:user_id] %>
