@@ -1,5 +1,8 @@
+require 'bcrypt'
+
 class Attendee
 	include Mongoid::Document
+
 	field :email, type: String
 	field :rsvp, type: Boolean
 

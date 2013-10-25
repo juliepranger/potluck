@@ -22,5 +22,13 @@ Potluck::Application.routes.draw do
   #delete 'authentications/ => 'authentications#destroy'
   post "/logout", to: "authentications#destroy", as: "logout"
 
+  #dashboard options
+  get 'dashboards' => 'dashboards#home'
+  get 'dashboards/new' => 'dashboards#new'
+  get 'dashboards/:id' => 'dashboards#show' #redirect to this dashboard after user logs in
+
+  post 'dashboards' => 'dashboards#create' #creating new dashboard
+
+  #need to make a delete for dashboard when a user deletes their account
 end
  
