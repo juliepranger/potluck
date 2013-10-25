@@ -9,7 +9,7 @@ body {
 }
 
 #container {
-	background-color: #eee;
+	background-color: $maincolor;
 	width: 800px;
 	margin: 0 auto;
 	font-family: Helvetica;
@@ -51,7 +51,7 @@ ul {
       background:url(file000279282873.jpg)
 
       }
-   }
+   
 }
 
 .button {

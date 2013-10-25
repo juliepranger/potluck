@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.0.0"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 gem "mongoid", github: "mongoid/mongoid"
@@ -41,5 +43,10 @@ gem 'bcrypt-ruby', github: 'codahale/bcrypt-ruby'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
+#heroku deployment for rails 4
+	group :production do
+		gem 'rails_12factor'
+		gem 'thin'
+	end
 # Use debugger
 # gem 'debugger', group: [:development, :test]

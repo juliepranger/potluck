@@ -9,6 +9,9 @@ class User
 	field :salt, type: String
 	field :hashed_password, type: String
 
+	has_many :parties #links to the model for parties
+	has_many :attendees #links to attendee model
+
   before_save :hash_password
   validates :email, presence: true
   validates :email, uniqueness: { case_sensitive: false }

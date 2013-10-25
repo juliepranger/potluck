@@ -6,8 +6,17 @@
 	<ul>
 		<li><%= party.name %></li>
 		<li><%= party.date %></li>
-		<li><%= party.user %>	
+		<li><% if party.user %>
+					Hosted by: <%= party.user.email %>	
+					<% end %>
 				<%= button_to "X", {action: "destroy", id: party.id}, {method: :delete, data:{confirm: "Are you sure?"}, :class => "button"} %> Remove Party</li>
+			<% party.attendees.each do |a| %> <!--for each attendee called a, list below -->
+			Attending:<ul>
+				<li><%= a.rsvp %></li>
+				<li><%= a.user.email %>	
+						
+			</ul>
+		<% end %>	
 	</ul>
 </div>
 

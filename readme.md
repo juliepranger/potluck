@@ -44,3 +44,31 @@ Long-Term:
 - extras: party playlist? game? floral arrangements?
 - link to Pinterest/Tumblr/Instagram for party inspiration pics
 
+---------------------------------
+-User reads intro
+-user logs in
+-user signs up
+-user sees dashboard with event and friend updates
+-user creates events
+-user invites friends to events (send mass invite)
+-users can accept friends' invites
+-user can visit event page
+-user can edit own event
+-user can bring item(s) to event
+-user logout
+--------------------------
+
+User ---> Parties (User has_many Parties)
+
+Parties ---> 1 User (Parties belongs_to User)
+Parties ----> Many Attendees (also Users)
+
+
+
+
+
+
+
+
+
+
