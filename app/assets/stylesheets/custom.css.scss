@@ -7,13 +7,14 @@ $maincolor: #338036;
 body {
 	background-color: $maincolor;
    color: #D9DEDA;
+   font-family: 'Gilda Display', serif;
 }
 
 #container {
 	background-color: $maincolor;
 	width: 800px;
 	margin: 0 auto;
-	font-family: Helvetica;
+	font-family: 'Gilda Display', serif;
 	color: #D9DEDA;
 }
 
@@ -24,7 +25,7 @@ nav {
 }
 
 ul li {
-   font-family: Helvetica;
+   font-family: 'Gilda Display', serif;
    color: black;
    display: inline;
    padding: 0 10px 0 10px;
@@ -38,23 +39,36 @@ a:link, a:visited, a:disabled {
 	border: 1px solid 
 } */
 
-
-h1 {
-   padding-top: 20px;
-	color: #D9DEDA;
-   font-family: 'Rock Salt', cursive;
-   font-size: 48px;
-   margin: 0 auto;
-   text-align: center;
-}
-
 ul {
 	list-style-type: none;
 	display: inline;
 }
 
 #homecontainer { 
-   font: #D9DEDA; 
+   font: #D9DEDA;  
+}
+
+header {
+   background: -webkit-radial-gradient(#44AD48, $maincolor, #29662B); /* Safari */
+   background: -o-radial-gradient(#44AD48, $maincolor, #29662B); /* For Opera 11.1 to 12.0 */
+   background: -moz-radial-gradient(#44AD48, $maincolor, #29662B); /* For Firefox 3.6 to 15 */
+   background: radial-gradient(#44AD48, $maincolor, #29662B); /* Standard syntax */
+}
+
+h1 {
+   padding-top: 20px;
+   color: #D9DEDA;
+   font-family: 'Rock Salt', cursive;
+   font-size: 64px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+header p {
+   padding: 40px 0 40px 0;
+   text-align: center;
+   margin: 0 auto;
+   font-family: 'Gilda Display', serif;
 }
 
 .button {
