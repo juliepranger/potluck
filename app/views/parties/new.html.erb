@@ -6,21 +6,20 @@
 	<%= form_for @party do |party| %>
 <p>
 	<%= party.label :name, "Name" %>
-	<%= party.text_field :name%>
+	<%= party.text_field :name %>
 </p>
 
 <p>
-	<%= party.label :date, "Party Date"%>
-	<%=party.text_field :date%>
+	<%= party.label :date, "Party Date" %>
+	<%= party.text_field :date %>
 </p>
 
 <p>
-	<%= party.label :email, "User Email" %>
-	<%=party.hidden_field :email, value: current_user.email %>
+	<%= party.hidden_field :email, value: current_user.email %>
+	<%= party.hidden_field :userid, value: session[:user_id] %>
 </p>
-<%= party.hidden_field :userid, value: session[:user_id] %>
 <p>
-<%= party.submit %> 
+	<%= party.submit %> 
 </p>
 
 <%end%>

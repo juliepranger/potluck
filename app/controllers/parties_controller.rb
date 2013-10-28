@@ -11,6 +11,14 @@ class PartiesController < ApplicationController
 		@party = Party.find(params[:id])
 	end
 
+	def create_party_access
+		if current_user == :userid
+			redirect_to :action => 'show', :id =>@party._id
+		else
+			flash[:notice] = "Uh oh, you're not signed in!"
+		end
+	end
+
 	def create
 		@party = Party.create(params[:party].permit(:name, :date, :email, :userid))
 		redirect_to :action => 'show', :id =>@party._id

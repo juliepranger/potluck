@@ -8,8 +8,8 @@
 		<li><%= party.date %></li>
 		<li><% if party.user %>
 					Hosted by: <%= party.user.email %>	
-					<% end %>
-				<%= button_to "X", {action: "destroy", id: party.id}, {method: :delete, data:{confirm: "Are you sure?"}, :class => "button"} %> Remove Party</li>
+					<% end %></li>
+		<li><%= button_to "X", {action: "destroy", id: party.id}, {method: :delete, data:{confirm: "Are you sure?"}, :class => "button"} %> Remove Party</li>
 			<% party.attendees.each do |a| %> <!--for each attendee called a, list below -->
 			Attending:<ul>
 				<li><%= a.rsvp %></li>

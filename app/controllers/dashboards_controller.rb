@@ -9,12 +9,12 @@ class DashboardsController < ApplicationController
 
 	def show #actually creating the new user w/ data provided
 		@dashboard = Dashboard.create(params[:dashboard].permit(:email, :password, :name))
-		redirect to action: 'show', id: @dashboard._id
+		redirect to action: 'show', id: @user._id
 	end
 
 	def destroy
 		Dashboard.find(params[:id]).destroy
-		redirect to dashboards_url
+		redirect to users_url
 	end
-		
+
 end

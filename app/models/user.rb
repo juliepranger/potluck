@@ -10,9 +10,11 @@ class User
 	field :salt, type: String
 	field :hashed_password, type: String
   field :name, type: String
+  field :is_host, type: Boolean
+  field :is_attendee, type: Boolean
+  field :is_current_user, type: Boolean
 
 	has_many :parties #links to the model for parties
-	has_many :attendees #links to attendee model
 
   before_save :hash_password
   validates :email, presence: true

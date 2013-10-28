@@ -1,12 +1,13 @@
 @import 'bootstrap';
 
 $maincolor: #338036;
+$accentcolor: #D9DEDA;
 
 
 
 body {
 	background-color: $maincolor;
-   color: #D9DEDA;
+   color: $accentcolor;
    font-family: 'Gilda Display', serif;
 }
 
@@ -15,11 +16,11 @@ body {
 	width: 800px;
 	margin: 0 auto;
 	font-family: 'Gilda Display', serif;
-	color: #D9DEDA;
+	color: $accentcolor;
 }
 
 nav {
-   background-color: #D9DEDA;
+   background-color: $accentcolor;
    font-color: $maincolor;
    padding: 10px;
 }
@@ -45,11 +46,12 @@ ul {
 }
 
 #homecontainer { 
-   font: #D9DEDA;  
+   font: $accentcolor;  
 }
 
 
 header {
+   padding: 20px 0 20px 0;
    background: -webkit-radial-gradient(#44AD48, $maincolor, #29662B); /* Safari */
    background: -o-radial-gradient(#44AD48, $maincolor, #29662B); /* For Opera 11.1 to 12.0 */
    background: -moz-radial-gradient(#44AD48, $maincolor, #29662B); /* For Firefox 3.6 to 15 */
@@ -58,7 +60,7 @@ header {
 
 h1 {
    padding-top: 20px;
-   color: #D9DEDA;
+   color: $accentcolor;
    font-family: 'Rock Salt', cursive;
    font-size: 64px;
    margin: 0 auto;
