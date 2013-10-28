@@ -16,5 +16,5 @@ class DashboardsController < ApplicationController
 		Dashboard.find(params[:id]).destroy
 		redirect to dashboards_url
 	end
-	
+		
 end

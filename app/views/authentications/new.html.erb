@@ -9,9 +9,9 @@
 
 	<p>
 		<%= user.label :password, "Password" %>
-		<%= user.text_field :password %>
+		<%= user.password_field :password %>
 	</p>
-
+	<% user.text_field :user_id, value: session[:user_id] %>
 	<p>
 		<%= user.submit "Log In" %>
 	</p>

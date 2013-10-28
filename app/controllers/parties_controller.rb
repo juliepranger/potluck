@@ -12,7 +12,7 @@ class PartiesController < ApplicationController
 	end
 
 	def create
-		@party = Party.create(params[:party].permit(:name, :date, :user))
+		@party = Party.create(params[:party].permit(:name, :date, :email, :userid))
 		redirect_to :action => 'show', :id =>@party._id
 	end
 
