@@ -11,10 +11,21 @@ class Attendee
 	belongs_to :user
 	has_one :food_item
 
+	def new
+		@attendee = Attendee.new
+	end
+
 	def invite()
+		@attendee = Attendee.new(params[:attendee].permit(:name, :email, :password, :rsvp))
+		party.@attendee = current_user
+		@attendee.save
+
 	end
 
 	def sort()
+		if :rsvp 
+		else
+			
 	end
 
 end

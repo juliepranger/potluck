@@ -4,7 +4,7 @@ class Food_Item
 	field :type, type: String
 	field :food_name, type: String
 
-	def bring
+	def bring()
 	end
 
 end

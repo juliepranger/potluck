@@ -36,6 +36,8 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', github: 'codahale/bcrypt-ruby'
 
+# mailer app used
+gem 'mandrill_mailer', github: 'renz45/mandrill_mailer'
 
 # Use unicorn as the app server
 # gem 'unicorn'
