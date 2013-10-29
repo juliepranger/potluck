@@ -1,8 +1,11 @@
-class Food_Item
+class FoodItem
 	include Mongoid::Document
+	include Mongoid::Attributes::Dynamic
 
-	field :type, type: String
+	field :food_type, type: String
 	field :food_name, type: String
+
+	belongs_to :attendee
 
 	def bring()
 	end

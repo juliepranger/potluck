@@ -9,23 +9,23 @@ class Attendee
 
 	belongs_to :party
 	belongs_to :user
-	has_one :food_item
+	has_one :fooditem
 
 	def new
 		@attendee = Attendee.new
 	end
 
-	def invite()
-		@attendee = Attendee.new(params[:attendee].permit(:name, :email, :password, :rsvp))
-		party.@attendee = current_user
-		@attendee.save
+	# def invite()
+	# 	@attendee = Attendee.new(params[:attendee].permit(:name, :email, :password)
+	# 	party.attendee = current_user
+	# 	@attendee.save
 
-	end
+	# end
 
 	def sort()
 		if :rsvp 
 		else
-			
+		end
 	end
 
 end
