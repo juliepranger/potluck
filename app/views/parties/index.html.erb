@@ -13,11 +13,10 @@
 			<% party.attendee.each do |a| %> <!--for each attendee called a, list below -->
 			Attending:<ul>
 				<li><%= a.rsvp %></li>
-				<li><%= a.host.email %>	
+				<li><%= a.host.email %></li>
 						
 			</ul>
 		<% end %>	
 	</ul>
 	<% end %>
 </div>
-User id: <%= session[:user_id] %>

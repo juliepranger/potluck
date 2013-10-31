@@ -6,10 +6,11 @@ class Attendee
 	field :email, type: String
 	field :password, type: String
 	field :rsvp, type: Boolean
+	field :attendee_id, type: String
 
 	belongs_to :party
 	belongs_to :user
-	has_one :fooditem
+	has_one :item
 
 	def new
 		@attendee = Attendee.new

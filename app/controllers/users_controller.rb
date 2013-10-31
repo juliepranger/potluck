@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.all
+		@user = current_user
 	end
 
 	def new
@@ -10,7 +11,7 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.create(params.require(:user).permit(:email, :password, :password_confirmation))
-		redirect_to users_url
+		redirect_to usersurl
 		# :action => 'show', :id =>@user._id
 	end
 

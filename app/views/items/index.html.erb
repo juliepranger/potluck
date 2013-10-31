@@ -1,0 +1,17 @@
+<header>
+	<h1>Party Details (Index)</h1>
+</header>
+
+<div id="indexcontainer">
+	<% @items.each do |item| %>
+	<ul>
+		<li><%= item.food_type %></li>
+		<li><%= item.food_name %></li>
+		<li><%= item.attendee %></li>
+		Brought by:
+		<li><%= @attendee %>
+				<%= @attendee.item.email %></li>
+		<li><%= button_to "X", {action: "destroy", id: item.id}, {method: :delete, data:{confirm: "Are you sure?"}, :class => "button"} %> Remove Item</li>
+	</ul>
+	<% end %>
+</div>

@@ -3,7 +3,7 @@ Potluck::Application.routes.draw do
 
   resources :users #consolidating what has been commented out 
   resources :parties
-  resources :fooditems
+  resources :items
 
   # get 'parties' => 'parties#index'
   # get 'parties/new' => 'parties#new' # form to add newbies MUST BE before SHOW
@@ -26,13 +26,5 @@ Potluck::Application.routes.draw do
   #delete 'authentications/ => 'authentications#destroy'
   get "/logout", to: "authentications#destroy", as: "logout"
 
-  #dashboard options
-  get 'dashboards' => 'dashboards#home'
-  get 'dashboards/new' => 'dashboards#new'
-  # get 'dashboards/:id' => 'dashboards#show' #redirect to this dashboard after user logs in
-
-  post 'dashboards' => 'dashboards#create' #creating new dashboard
-
-  #need to make a delete for dashboard when a user deletes their account
 end
  

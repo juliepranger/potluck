@@ -26,7 +26,7 @@ Attendee.create([
 	{name: "lorin", email: "lorin@lorin.com", password: "lorin"}
 	])
 
-FoodItem.create([
+Item.create([
 	{food_type: "appetizer", food_name: "fruit salad"},
 	{food_type: "main course", food_name: "tacos"},
 	{food_type: "dessert", food_name: "dulce de leche"}

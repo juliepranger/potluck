@@ -1,4 +1,4 @@
-class FoodItem
+class Item
 	include Mongoid::Document
 	include Mongoid::Attributes::Dynamic
 
