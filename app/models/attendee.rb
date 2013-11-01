@@ -6,7 +6,8 @@ class Attendee
 	field :email, type: String
 	field :password, type: String
 	field :rsvp, type: Boolean
-	field :attendee_id, type: String
+	field :attendeeid, type: String
+	field :guest_list, type: Array
 
 	belongs_to :party
 	belongs_to :user
@@ -16,12 +17,10 @@ class Attendee
 		@attendee = Attendee.new
 	end
 
-	# def invite()
-	# 	@attendee = Attendee.new(params[:attendee].permit(:name, :email, :password)
-	# 	party.attendee = current_user
-	# 	@attendee.save
+	def invite(attendee)
+		@attendee = Attendee.new(params[:attendeeid].permit(:name, :email, :password))
 
-	# end
+	end
 
 	def sort()
 		if :rsvp 

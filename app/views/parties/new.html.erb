@@ -5,7 +5,7 @@
 <div id="newcontainer">
 	<%= form_for @party do |party| %>
 <p>
-	<%= party.label :name, "Name" %>
+	<%= party.label :name, "Party Name" %>
 	<%= party.text_field :name %>
 </p>
 
@@ -15,12 +15,17 @@
 </p>
 
 <p>
+	<%= party.label :location, "Party Address" %>
+	<%= party.text_field :location %>
+</p>
+
+<p>
 	<%= party.hidden_field :email, value: current_user.email %>
 	<%= party.hidden_field :userid, value: session[:user_id] %>
 </p>
 <p>
 	<%= party.label :attendee, "Guest Email(s) (separated by commas)" %>
-	<%= party.text_field :attendee_id %>
+	<%= party.text_field :attendeeid %>
 </p>
 <p>
 	<%= party.submit %> 
