@@ -7,7 +7,7 @@ class AttendeesController < ApplicationController
 	def show # who is the attendee in question
 		@attendee = Attendee.new
 		@attendee.save
-		@party.attendee.all = :guest_list
+		@party.attendees.all = :guest_list
 	end
 
 	def destroy 								#canceling your invite, can't go to party?

@@ -24,8 +24,8 @@
 	<%= party.hidden_field :userid, value: session[:user_id] %>
 </p>
 <p>
-	<%= party.label :attendee, "Guest Email(s) (separated by commas)" %>
-	<%= party.text_field :attendeeid %>
+	<%= party.label :guest_list, "Guest Email(s) (separated by commas)" %>
+	<%= party.text_field :guest_list %>
 </p>
 <p>
 	<%= party.submit %> 

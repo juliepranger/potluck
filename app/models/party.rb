@@ -7,9 +7,9 @@ class Party
 	field :location, type: String
 	field :userid, type: String
 	field :email, type: String
-	field :attendeeid, type: String
+	field :attendee_id, type: String
 	field :host_id, type: String
-	field :guest_list, type: Array
+	field :guest_list, type: String #will convert to Array in Party's create method
 
 	belongs_to :host, class_name: "User" #person hosting the party
 	has_many :attendees
