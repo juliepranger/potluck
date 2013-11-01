@@ -9,8 +9,8 @@
 		<li><%= item.food_name %></li>
 		<li><%= item.attendee %></li>
 		Brought by:
-		<li><%= @attendee %>
-				<%= @attendee.item.email %></li>
+		<li><%= @attendees %>
+				<%= @attendees.item.email %></li>
 		<li><%= button_to "X", {action: "destroy", id: item.id}, {method: :delete, data:{confirm: "Are you sure?"}, :class => "button"} %> Remove Item</li></br>
 		<li><%= button_to "Edit", {action: "update", id: item.id}, {method: :get, data:{confirm: "Are you sure?"}, :class => "button"} %> Edit Item</li>
 	<% end %>

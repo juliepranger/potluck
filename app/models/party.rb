@@ -19,7 +19,4 @@ class Party
 	def rsvp() #guest_list needs to be included (user_id list)
 	end
 
-	def edit() # put in controller
-	end
-
 end

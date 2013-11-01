@@ -5,3 +5,4 @@
 <%= @party.location %> </br>
 <%= @party.email %> </br>
 <%= @party.guest_list %> </br>
+<%= button_to "Edit", edit_party_url(@party), controller: :parties, action: :edit, method: :get %>

@@ -27,9 +27,17 @@ class PartiesController < ApplicationController
 		redirect_to :action => 'show', :id =>@party._id
 	end
 
+	def edit
+		@party = Party.find(params[:id])
+	end
+
 	def update
 		@party = Party.find(params[:id])
-		redirect_to :action => 'show', :id =>@party_id
+		if @party.update_attributes(params[:party].permit(:name, :date, :location, :guest_list, :email, :items))
+			redirect_to action: 'show', id: @party
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy

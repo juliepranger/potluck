@@ -9,7 +9,9 @@
 		<li><% if party.host %>
 					Hosted by: <%= party.host.email %>	
 					<% end %></li>
-		<li><%= button_to "X", {action: "destroy", id: party.id}, {method: :delete, data:{confirm: "Are you sure?"}, :class => "button"} %> Remove Party</li>
+		<li><%= button_to "X", {action: "destroy", id: party.id}, {method: :delete, data:{confirm: "Are you sure?"}, :class => "button"} %> 
+			Remove Party</li>
+		<li><%= button_to "Edit", edit_party_url(party.id), controller: :parties, action: :edit, method: :get %></li>
 			Attending:
 			<% party.guest_list.split(',').each do |a| %> <!--for each attendee in the guest list, list below -->
 			<ul>

@@ -18,7 +18,7 @@ class Attendee
 	end
 
 	def invite(attendee)
-		@attendee = Attendee.new(params[:attendee_id].permit(:name, :email, :password))
+		@attendee = Attendee.new(params[:attendee_id].permit(:name, :email, :password, :id, :item))
 
 	end
 

@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
 
 	def index
 		@items = Item.all
+		@attendees = Attendee.all
 	end
 
 	def new
