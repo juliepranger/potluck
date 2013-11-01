@@ -1,8 +1,10 @@
 <h2>Let's plan <%=@party.name %></h2>
 
-<%= @party.name %> </br>
-<%= @party.date %> </br>
-<%= @party.location %> </br>
-<%= @party.email %> </br>
-<%= @party.guest_list %> </br>
-<%= button_to "Edit", edit_party_url(@party), controller: :parties, action: :edit, method: :get %>
+<h4>General Info</h4>
+<p>
+Party Name: <%= @party.name %> </br>
+Party Date: <%= @party.date %> </br>
+Party Location: <%= @party.location %> </br>
+Host's Email: <%= @party.email %> </br>
+Guest List: <%= @party.guest_list %> </br>
+</p>

@@ -4,21 +4,19 @@
 <div id="indexcontainer">
 	<% @parties.each do |party| %>
 	<ul>
-		<li><%= party.name %></li>
-		<li><%= party.date %></li>
+		<li>Party Name: <%= party.name %></li></br>
+		<li>Party Date: <%= party.date %></li></br>
 		<li><% if party.host %>
 					Hosted by: <%= party.host.email %>	
-					<% end %></li>
-		<li><%= button_to "X", {action: "destroy", id: party.id}, {method: :delete, data:{confirm: "Are you sure?"}, :class => "button"} %> 
-			Remove Party</li>
-		<li><%= button_to "Edit", edit_party_url(party.id), controller: :parties, action: :edit, method: :get %></li>
-			Attending:
-			<% party.guest_list.split(',').each do |a| %> <!--for each attendee in the guest list, list below -->
-			<ul>
-				<li><%= a %></li>
-						
-			</ul>
-		<% end %>	
+					<% end %>
+					Attending: <% party.guest_list.split(',').each do |a| %></li> <!--for each attendee in the guest list, list below -->
+		<li><%= a %></li>		
+		<% end %>
+		<ul>
+			<li><%= button_to "View Party", party_url(party.id), controller: :parties, action: :show, method: :get %></li>
+			<li><%= button_to "Edit", edit_party_url(party.id), controller: :parties, action: :edit, method: :get %></li>
+			<li><%= button_to "Delete", {action: "destroy", id: party.id}, {method: :delete, data:{confirm: "Are you sure?"}, :class => "button"} %></li></br>
+		</ul>
 	</ul>
 	<% end %>
 </div>
