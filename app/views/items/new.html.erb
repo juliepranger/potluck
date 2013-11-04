@@ -1,3 +1,26 @@
 <header>
-	<h1>This is my "new" item page<h1d>
+	<h1>Cornucopia</h1>
 </header>
+
+<h2>What should I bring to <%= @party.name %>? </h2></br>
+<h4>Make it easy on yourself, please only sign up once!</h4>
+
+<div id="newcontainer">
+	<%= form_for @item do |item| %>
+
+	<p>
+		<%= item.label :food_type, "Item Type" %>
+		<%= item.select :food_type, options_for_select([['Drinks', 'Drinks'], ['Appetizer', 'Appetizer'], ['Salad', 'Salad'], ['Main Course', 'Main Course'], ['Side Dish', 'Side Dish'], ['Dessert', 'Dessert']]) %>
+	</p>
+	<p>
+		<%= item.label :food_name, "Item Name" %>
+		<%= item.text_field :food_name %>
+	</p>
+		<%= item.hidden_field :party_id, value: params[:format] %>
+	<p>
+		<%= item.submit "Bring It!" %>
+	</p>
+
+	<% end %>
+
+</div>

@@ -13,6 +13,7 @@ class Party
 
 	belongs_to :host, class_name: "User" #person hosting the party
 	has_many :attendees
+	has_many :items
 
 	#RSVPing to parties? method to add later
 

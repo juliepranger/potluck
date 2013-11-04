@@ -15,6 +15,7 @@ class User
   field :is_current_user, type: Boolean
 
 	has_many :parties #links to the model for parties
+  has_many :items, class_name: "Item", inverse_of: :attendee
 
   before_save :hash_password
   validates :email, presence: true

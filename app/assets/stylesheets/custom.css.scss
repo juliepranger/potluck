@@ -2,20 +2,21 @@
 
 $maincolor: #338036;
 $accentcolor: #D9DEDA;
+$fontstyle: 'Gilda Display', serif;
 
 
 
 body {
 	background-color: $maincolor;
    color: $accentcolor;
-   font-family: 'Gilda Display', serif;
+   font-family: $fontstyle;
 }
 
 #container {
 	background-color: $maincolor;
 	width: 800px;
 	margin: 0 auto;
-	font-family: 'Gilda Display', serif;
+	font-family: $fontstyle;
 	color: $accentcolor;
 }
 
@@ -25,8 +26,12 @@ nav {
    padding: 10px;
 }
 
+h4, h2 {
+   font-family: $fontstyle;
+}
+
 ul li {
-   font-family: 'Gilda Display', serif;
+   font-family: $fontstyle;
    color: black;
    display: inline;
    padding: 0 10px 0 10px;
@@ -47,6 +52,10 @@ ul {
 
 #homecontainer { 
    font: $accentcolor;  
+}
+
+#newcontainer {
+   font-family: $fontstyle;
 }
 
 
@@ -71,6 +80,6 @@ header p {
    padding: 40px 0 40px 0;
    text-align: center;
    margin: 0 auto;
-   font-family: 'Gilda Display', serif;
+   font-family: $fontstyle;
 }
 

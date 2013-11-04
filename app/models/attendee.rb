@@ -11,7 +11,7 @@ class Attendee
 	field :party_id, type: String
 
 	belongs_to :party
-	has_one :item
+	has_one :item, class_name: "Item", inverse_of: :attendee
 
 	def new
 		@attendee = Attendee.new

@@ -1,6 +1,6 @@
 <h2>Let's plan <%=@party.name %></h2>
 
-<h4>General Info</h4>
+<h3>General Info</h3>
 <p>
 Party Name: <%= @party.name %> </br>
 Party Date: <%= @party.date %> </br>
@@ -9,11 +9,19 @@ Host's Email: <%= @party.email %> </br>
 Guest List: <%= @party.guest_list %> </br>
 </p>
 
-<h2>Attendees:</h2>
+<h4>Attendees:</h4>
 
-<%= @party.attendees.each do |a| %>
-<p><%= a.name %></p>
-<% end %>
+<% @party.attendees.each do |a| %>
+	<li><%= a.name %> : 
+	<%= a.email %></li>
+	<% end %>
 <%= button_to "Add Guests", new_attendee_url(@party),
 	controller: :attendees, action: :new, method: :get %>
-<%= button_to "Edit Item List", new_item_url(@party.id), controller: :items, action: :create, method: :get %>
+
+<h4>Items:</h4>
+
+<% @party.items.each do |i| %>
+<li><%= i.food_type %> : <%= i.food_name %> 	(<%= i.attendee.name %>)</li>
+
+	<% end %>
+<%= button_to "Add Item", new_item_url(@party.id), controller: :items, action: :create, method: :get %>
