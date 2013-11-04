@@ -7,7 +7,7 @@ class Item
 
 	belongs_to :attendee
 
-	def bring()
-	end
+	# def bring()
+	# end
 
 end

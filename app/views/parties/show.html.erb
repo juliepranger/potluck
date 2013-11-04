@@ -8,3 +8,12 @@ Party Location: <%= @party.location %> </br>
 Host's Email: <%= @party.email %> </br>
 Guest List: <%= @party.guest_list %> </br>
 </p>
+
+<h2>Attendees:</h2>
+
+<%= @party.attendees.each do |a| %>
+<p><%= a.name %></p>
+<% end %>
+<%= button_to "Add Guests", new_attendee_url(@party),
+	controller: :attendees, action: :new, method: :get %>
+<%= button_to "Edit Item List", new_item_url(@party.id), controller: :items, action: :create, method: :get %>

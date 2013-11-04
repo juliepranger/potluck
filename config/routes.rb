@@ -4,6 +4,7 @@ Potluck::Application.routes.draw do
   resources :users #consolidating what has been commented out 
   resources :parties
   resources :items
+  resources :attendees
 
   # get 'parties' => 'parties#index'
   # get 'parties/new' => 'parties#new' # form to add newbies MUST BE before SHOW

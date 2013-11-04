@@ -3,34 +3,34 @@
 </header>
 
 <div id="newcontainer">
-	<%= form_for @party do |party| %>
-<p>
-	<%= party.label :name, "Party Name" %>
-	<%= party.text_field :name %>
-</p>
+		<%= form_for @party do |party| %>
+	<p>
+		<%= party.label :name, "Party Name" %>
+		<%= party.text_field :name %>
+	</p>
 
-<p>
-	<%= party.label :date, "Party Date" %>
-	<%= party.text_field :date %>
-</p>
+	<p>
+		<%= party.label :date, "Party Date" %>
+		<%= party.text_field :date %>
+	</p>
 
-<p>
-	<%= party.label :location, "Party Address" %>
-	<%= party.text_field :location %>
-</p>
+	<p>
+		<%= party.label :location, "Party Address" %>
+		<%= party.text_field :location %>
+	</p>
 
-<p>
-	<%= party.hidden_field :email, value: current_user.email %>
-	<%= party.hidden_field :userid, value: session[:user_id] %>
-</p>
-<p>
-	<%= party.label :guest_list, "Guest Email(s) (separated by commas)" %>
-	<%= party.text_field :guest_list %>
-</p>
-<p>
-	<%= party.submit %> 
-</p>
+	<p>
+		<%= party.hidden_field :email, value: current_user.email %>
+		<%= party.hidden_field :userid, value: session[:user_id] %>
+	</p>
+	<p>
+		<%= party.label :guest_list, "Guest Email(s) (separated by commas)" %>
+		<%= party.text_field :guest_list %>
+	</p>
+	<p>
+		<%= party.submit %> 
+	</p>
 
-<%end%>
+	<%end%>
 
 </div>

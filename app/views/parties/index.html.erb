@@ -13,8 +13,8 @@
 		<li><%= a %></li>		
 		<% end %>
 		<ul>
-			<li><%= button_to "View Party", party_url(party.id), controller: :parties, action: :show, method: :get %></li>
-			<li><%= button_to "Edit", edit_party_url(party.id), controller: :parties, action: :edit, method: :get %></li>
+			<li><%= button_to "View Party/Add Guests", party_url(party.id), controller: :parties, action: :show, method: :get %></li>
+			<li><%= button_to "Edit Party Info", edit_party_url(party.id), controller: :parties, action: :edit, method: :get %></li>
 			<li><%= button_to "Delete", {action: "destroy", id: party.id}, {method: :delete, data:{confirm: "Are you sure?"}, :class => "button"} %></li></br>
 		</ul>
 	</ul>

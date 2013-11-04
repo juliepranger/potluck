@@ -8,9 +8,9 @@ class Attendee
 	field :rsvp, type: Boolean
 	field :attendee_id, type: String
 	field :guest_list, type: Array
+	field :party_id, type: String
 
 	belongs_to :party
-	belongs_to :user
 	has_one :item
 
 	def new
@@ -18,7 +18,7 @@ class Attendee
 	end
 
 	def invite(attendee)
-		@attendee = Attendee.new(params[:attendee_id].permit(:name, :email, :password, :id, :item))
+		@attendee = Attendee.new(params[:attendee].permit(:name, :email, :id, :item))
 
 	end
 
